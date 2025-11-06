@@ -1,0 +1,6 @@
+mistralai
+chromadb
+streamlit
+beautifulsoup4
+python-dotenv
+requests
