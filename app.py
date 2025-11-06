@@ -1,10 +1,12 @@
 import streamlit as st
 import chromadb
 import os
-from mistralai import Mistral
+#from mistralai import Mistral
 from dotenv import load_dotenv
+from mistralai.client import MistralClient
 
 load_dotenv()
+#MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 
 client = Mistral(api_key=MISTRAL_API_KEY)
@@ -39,3 +41,4 @@ if query:
 for q, a in st.session_state.chat_history:
     st.write(f"**You:** {q}")
     st.write(f"**Assistant:** {a}")
+
